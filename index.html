@@ -145,7 +145,7 @@
   .btn.ghost{background:transparent;color:var(--ink);}
   .btn.ghost:hover{border-color:var(--ink);background:var(--ivory-dim);}
 
-  .hero{position:relative;padding:100px 0 80px;overflow:hidden;}
+  .hero{position:relative;padding:100px 0 80px;overflow:hidden;content-visibility:visible;}
   .hero-grid{
     display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;
     position:relative;z-index:2;
@@ -171,7 +171,7 @@
   }
   .hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:none;}
 
-  section{padding:90px 0;}
+  section{padding:90px 0;content-visibility:auto;contain-intrinsic-size:700px;}
   .section-head{margin-bottom:44px;}
   .section-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);}
   .section-head p.lede{color:var(--ink-soft);max-width:56ch;margin-top:10px;}
@@ -322,11 +322,7 @@
 
     .photo-intro{grid-template-columns:1fr;gap:22px;}
     .photo-intro h2{max-width:none;}
-    .photo-gallery{
-      grid-template-columns:1fr 1fr;
-      grid-template-rows:240px 240px;
-    }
-    .photo-card.featured{grid-row:1 / span 2;}
+    .photo-gallery{columns:2 260px;}
   }
 
   @media (max-width:600px){
@@ -384,7 +380,7 @@
       </div>
       <div class="hero-photo">
         <div class="frame">
-          <img src="assets/portrait-chua-jia-xuan.webp" alt="Portrait of Chua Jia Xuan">
+          <img src="assets/portrait-chua-jia-xuan.webp" alt="Portrait of Chua Jia Xuan" width="300" height="375" loading="eager" fetchpriority="high" decoding="async">
         </div>
       </div>
     </div>
@@ -520,49 +516,49 @@
         </div>
       </div>
       <div class="photo-gallery"><figure class="photo-card featured" data-reveal data-lightbox="inline" data-caption="Frame 01">
-  <img src="assets/chua-jia-xuan-photography-01.webp" alt="Snow-capped mountain range above a green alpine valley under a cloudy sky, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-01.webp" alt="Snow-capped mountain range above a green alpine valley under a cloudy sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 01</span><span class="photo-index">01</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 02">
-  <img src="assets/chua-jia-xuan-photography-02.webp" alt="Street vendor selling traditional paper lantern boats by the roadside in Hoi An, Vietnam, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-02.webp" alt="Street vendor selling traditional paper lantern boats by the roadside in Hoi An, Vietnam, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 02</span><span class="photo-index">02</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 03">
-  <img src="assets/chua-jia-xuan-photography-03.webp" alt="Food vendor preparing traditional Vietnamese food at a roadside stall, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-03.webp" alt="Food vendor preparing traditional Vietnamese food at a roadside stall, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 03</span><span class="photo-index">03</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 04">
-  <img src="assets/chua-jia-xuan-photography-04.webp" alt="Street artist sitting beside the road as pedestrians walk past, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-04.webp" alt="Street artist sitting beside the road as pedestrians walk past, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 04</span><span class="photo-index">04</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 05">
-  <img src="assets/chua-jia-xuan-photography-05.webp" alt="Turquoise alpine lake surrounded by green mountains and a rocky valley, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-05.webp" alt="Turquoise alpine lake surrounded by green mountains and a rocky valley, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 05</span><span class="photo-index">05</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 06">
-  <img src="assets/chua-jia-xuan-photography-06.webp" alt="Rows of yellow taxis lined up along a busy street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-06.webp" alt="Rows of yellow taxis lined up along a busy street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 06</span><span class="photo-index">06</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 07">
-  <img src="assets/chua-jia-xuan-photography-07.webp" alt="Cable-stayed bridge and modern city skyline viewed across calm water, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-07.webp" alt="Cable-stayed bridge and modern city skyline viewed across calm water, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 07</span><span class="photo-index">07</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 08">
-  <img src="assets/chua-jia-xuan-photography-08.webp" alt="Wide snow-covered mountain range stretching across an open landscape beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-08.webp" alt="Wide snow-covered mountain range stretching across an open landscape beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 08</span><span class="photo-index">08</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 09">
-  <img src="assets/chua-jia-xuan-photography-09.webp" alt="Brightly illuminated buildings overlooking a bustling city street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-09.webp" alt="Brightly illuminated buildings overlooking a bustling city street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 09</span><span class="photo-index">09</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 10">
-  <img src="assets/chua-jia-xuan-photography-10.webp" alt="Green hillside village with houses scattered among trees beneath a clear blue sky, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-10.webp" alt="Green hillside village with houses scattered among trees beneath a clear blue sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 10</span><span class="photo-index">10</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 11">
-  <img src="assets/chua-jia-xuan-photography-11.webp" alt="Snow-covered mountain peak rising above a forested alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-11.webp" alt="Snow-covered mountain peak rising above a forested alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 11</span><span class="photo-index">11</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 12">
-  <img src="assets/chua-jia-xuan-photography-12.webp" alt="Rugged green mountains with sharp rocky peaks beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-12.webp" alt="Rugged green mountains with sharp rocky peaks beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 12</span><span class="photo-index">12</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 13">
-  <img src="assets/chua-jia-xuan-photography-13.webp" alt="Jagged snow-covered mountain peaks rising above a dramatic alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-13.webp" alt="Jagged snow-covered mountain peaks rising above a dramatic alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 13</span><span class="photo-index">13</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 14">
-  <img src="assets/chua-jia-xuan-photography-14.webp" alt="Red Lamborghini parked on an open mountain road beneath an overcast sky, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-14.webp" alt="Red Lamborghini parked on an open mountain road beneath an overcast sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 14</span><span class="photo-index">14</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 15">
-  <img src="assets/chua-jia-xuan-photography-15.webp" alt="Historic Vietnamese landmark and courtyard in Hue, Vietnam, viewed through a window, by Chua Jia Xuan" loading="lazy" decoding="async">
+  <img src="assets/chua-jia-xuan-photography-15.webp" alt="Historic Vietnamese landmark and courtyard in Hue, Vietnam, viewed through a window, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
   <figcaption class="photo-meta"><span class="photo-title">Frame 15</span><span class="photo-index">15</span></figcaption>
 </figure>
       </div>
@@ -678,3 +674,4 @@
 
 </body>
 </html>
+
