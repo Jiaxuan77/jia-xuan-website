@@ -37,10 +37,9 @@
     "description": "Student at Zhejiang University International Business School (ZIBS), based between Singapore and China, with experience across consulting, leadership, badminton and photography.",
     "image": "https://framerusercontent.com/images/wzRLuxU1rHfOYCmWsy7wwrhPCsg.jpg",
     "sameAs": [
-      "https://www.linkedin.com/in/jiaxuanchua/",
+      "https://cn.linkedin.com/in/jiaxuanchua",
       "https://github.com/Jiaxuan77",
-      "https://linktr.ee/jiaxuann",
-      "https://www.instagram.com/framesdiaries"
+      "https://linktr.ee/jiaxuann"
     ],
     "affiliation": {
       "@type": "CollegeOrUniversity",
@@ -146,7 +145,7 @@
   .btn.ghost{background:transparent;color:var(--ink);}
   .btn.ghost:hover{border-color:var(--ink);background:var(--ivory-dim);}
 
-  .hero{position:relative;padding:100px 0 80px;overflow:hidden;content-visibility:visible;}
+  .hero{position:relative;padding:100px 0 80px;overflow:hidden;}
   .hero-grid{
     display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;
     position:relative;z-index:2;
@@ -172,7 +171,7 @@
   }
   .hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:none;}
 
-  section{padding:90px 0;content-visibility:auto;contain-intrinsic-size:700px;}
+  section{padding:90px 0;}
   .section-head{margin-bottom:44px;}
   .section-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);}
   .section-head p.lede{color:var(--ink-soft);max-width:56ch;margin-top:10px;}
@@ -226,6 +225,18 @@
     letter-spacing:.05em;color:var(--green-deep);border-top:1px solid var(--line);
     padding-top:10px;max-width:16ch;
   }
+
+
+  /* Featured media */
+  #media{background:var(--ivory-dim);padding:90px 0;}
+  .media-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px;}
+  .media-card{border:1px solid var(--line);background:var(--ivory);padding:28px 30px;display:flex;flex-direction:column;min-height:190px;transition:transform .25s ease,border-color .25s ease;}
+  .media-card:hover{transform:translateY(-3px);border-color:var(--green);}
+  .media-source{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-deep);margin-bottom:18px;}
+  .media-card h3{font-family:'Inria Serif',serif;font-size:1.35rem;line-height:1.15;margin:0 0 10px;}
+  .media-card p{color:var(--ink-soft);font-size:.94rem;line-height:1.55;margin:0 0 22px;max-width:54ch;}
+  .media-link{margin-top:auto;color:var(--green-deep);font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;}
+  .media-link:hover{text-decoration:underline;}
 
   /* Photography — editorial archive */
   #photography{background:var(--ivory);padding-top:105px;padding-bottom:110px;}
@@ -323,7 +334,11 @@
 
     .photo-intro{grid-template-columns:1fr;gap:22px;}
     .photo-intro h2{max-width:none;}
-    .photo-gallery{columns:2 260px;}
+    .photo-gallery{
+      grid-template-columns:1fr 1fr;
+      grid-template-rows:240px 240px;
+    }
+    .photo-card.featured{grid-row:1 / span 2;}
   }
 
   @media (max-width:600px){
@@ -345,6 +360,26 @@
   }
 
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+
+    .elsewhere-note{
+      margin-top:28px;
+      text-align:center;
+      font-size:11px;
+      line-height:1.7;
+      color:rgba(255,255,255,.42);
+    }
+    .elsewhere-note a{
+      color:rgba(255,255,255,.55);
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,.16);
+      transition:color .2s ease,border-color .2s ease;
+    }
+    .elsewhere-note a:hover{
+      color:rgba(255,255,255,.85);
+      border-color:rgba(255,255,255,.4);
+    }
+    .elsewhere-note span{margin:0 5px;}
+
 </style>
 </head>
 
@@ -381,7 +416,7 @@
       </div>
       <div class="hero-photo">
         <div class="frame">
-          <img src="assets/portrait-chua-jia-xuan.webp" alt="Portrait of Chua Jia Xuan" width="300" height="375" loading="eager" fetchpriority="high" decoding="async">
+          <img src="assets/portrait-chua-jia-xuan.webp" alt="Portrait of Chua Jia Xuan">
         </div>
       </div>
     </div>
@@ -502,7 +537,7 @@
       </div>
     </div>
   </section>
-
+<div class="divider"></div>
   <!-- Photography redesigned into an editorial-style gallery. -->
   <section id="photography" aria-labelledby="photography-heading">
     <div class="wrap">
@@ -517,49 +552,49 @@
         </div>
       </div>
       <div class="photo-gallery"><figure class="photo-card featured" data-reveal data-lightbox="inline" data-caption="Frame 01">
-  <img src="assets/chua-jia-xuan-photography-01.webp" alt="Snow-capped mountain range above a green alpine valley under a cloudy sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-01.webp" alt="Snow-capped mountain range above a green alpine valley under a cloudy sky, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 01</span><span class="photo-index">01</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 02">
-  <img src="assets/chua-jia-xuan-photography-02.webp" alt="Street vendor selling traditional paper lantern boats by the roadside in Hoi An, Vietnam, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-02.webp" alt="Street vendor selling traditional paper lantern boats by the roadside in Hoi An, Vietnam, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 02</span><span class="photo-index">02</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 03">
-  <img src="assets/chua-jia-xuan-photography-03.webp" alt="Food vendor preparing traditional Vietnamese food at a roadside stall, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-03.webp" alt="Food vendor preparing traditional Vietnamese food at a roadside stall, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 03</span><span class="photo-index">03</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 04">
-  <img src="assets/chua-jia-xuan-photography-04.webp" alt="Street artist sitting beside the road as pedestrians walk past, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-04.webp" alt="Street artist sitting beside the road as pedestrians walk past, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 04</span><span class="photo-index">04</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 05">
-  <img src="assets/chua-jia-xuan-photography-05.webp" alt="Turquoise alpine lake surrounded by green mountains and a rocky valley, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-05.webp" alt="Turquoise alpine lake surrounded by green mountains and a rocky valley, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 05</span><span class="photo-index">05</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 06">
-  <img src="assets/chua-jia-xuan-photography-06.webp" alt="Rows of yellow taxis lined up along a busy street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-06.webp" alt="Rows of yellow taxis lined up along a busy street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 06</span><span class="photo-index">06</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 07">
-  <img src="assets/chua-jia-xuan-photography-07.webp" alt="Cable-stayed bridge and modern city skyline viewed across calm water, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-07.webp" alt="Cable-stayed bridge and modern city skyline viewed across calm water, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 07</span><span class="photo-index">07</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 08">
-  <img src="assets/chua-jia-xuan-photography-08.webp" alt="Wide snow-covered mountain range stretching across an open landscape beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-08.webp" alt="Wide snow-covered mountain range stretching across an open landscape beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 08</span><span class="photo-index">08</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 09">
-  <img src="assets/chua-jia-xuan-photography-09.webp" alt="Brightly illuminated buildings overlooking a bustling city street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-09.webp" alt="Brightly illuminated buildings overlooking a bustling city street in Chongqing, China, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 09</span><span class="photo-index">09</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 10">
-  <img src="assets/chua-jia-xuan-photography-10.webp" alt="Green hillside village with houses scattered among trees beneath a clear blue sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-10.webp" alt="Green hillside village with houses scattered among trees beneath a clear blue sky, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 10</span><span class="photo-index">10</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 11">
-  <img src="assets/chua-jia-xuan-photography-11.webp" alt="Snow-covered mountain peak rising above a forested alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-11.webp" alt="Snow-covered mountain peak rising above a forested alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 11</span><span class="photo-index">11</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 12">
-  <img src="assets/chua-jia-xuan-photography-12.webp" alt="Rugged green mountains with sharp rocky peaks beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-12.webp" alt="Rugged green mountains with sharp rocky peaks beneath a blue sky, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 12</span><span class="photo-index">12</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 13">
-  <img src="assets/chua-jia-xuan-photography-13.webp" alt="Jagged snow-covered mountain peaks rising above a dramatic alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-13.webp" alt="Jagged snow-covered mountain peaks rising above a dramatic alpine valley, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 13</span><span class="photo-index">13</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 14">
-  <img src="assets/chua-jia-xuan-photography-14.webp" alt="Red Lamborghini parked on an open mountain road beneath an overcast sky, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-14.webp" alt="Red Lamborghini parked on an open mountain road beneath an overcast sky, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 14</span><span class="photo-index">14</span></figcaption>
 </figure><figure class="photo-card" data-reveal data-lightbox="inline" data-caption="Frame 15">
-  <img src="assets/chua-jia-xuan-photography-15.webp" alt="Historic Vietnamese landmark and courtyard in Hue, Vietnam, viewed through a window, by Chua Jia Xuan" loading="lazy" decoding="async" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw">
+  <img src="assets/chua-jia-xuan-photography-15.webp" alt="Historic Vietnamese landmark and courtyard in Hue, Vietnam, viewed through a window, by Chua Jia Xuan" loading="lazy" decoding="async">
   <figcaption class="photo-meta"><span class="photo-title">Frame 15</span><span class="photo-index">15</span></figcaption>
 </figure>
       </div>
@@ -583,6 +618,18 @@
       <span>Singapore · China</span>
     </div>
   </div>
+
+<div class="elsewhere-note" aria-label="Selected publications">
+  <span>Selected publications:</span>
+  <a href="https://www.intl.zju.edu.cn/zh-hans/news/17962" target="_blank" rel="noopener noreferrer">
+    Zhejiang University International Campus
+  </a>
+  <span>·</span>
+  <a href="https://mp.weixin.qq.com/s?__biz=MzI3Mjc5ODcxMQ==&mid=2247523698&idx=1&sn=c86ae6951c9bcdc155ae7a1e6f8919a0&chksm=eac759e2073dbd19091debfa9a370cf345833c4a456fd7fb99e3a022cafcbd68c108353b2751&scene=27"
+     target="_blank" rel="noopener noreferrer">
+    Zhejiang University WeChat
+  </a>
+</div>
 </footer>
 
 <!-- Photography lightbox -->
@@ -675,4 +722,3 @@
 
 </body>
 </html>
-
